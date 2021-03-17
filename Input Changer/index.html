@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Changer</title>
+    <link rel="stylesheet" type="text/css" href="input.css">
+</head>
+<body>
+    <main>
+        <h1>Input Changer</h1>
+        <div class="btnone">
+            <label>Background Color</label>
+            <input class="bg-color" type="text">
+        </div>
+
+
+
+        <div class="btntwo">
+            <label>Text Color</label>
+            <input class="tx-color" type="text">
+        </div>
+
+
+        <div class="btnthree">
+            <label>Font Size</label>
+            <input class="f-size" type="text"> 
+        </div>
+
+        
+    </main>
+
+    <script>
+        const bgcolor = document.querySelector(".bg-color")
+        const txtcolor = document.querySelector(".tx-color")
+        const fntsize = document.querySelector(".f-size")
+        const bdy = document.querySelector("body")
+
+        bgcolor.addEventListener('keyup', function(event){
+            bdy.style.backgroundColor = event.target.value
+
+        })
+        txtcolor.addEventListener('keyup', function(event){
+            bdy.style.color = event.target.value
+        })
+        fntsize.addEventListener('keyup', function(event){
+            bdy.style.fontSize = event.target.value
+        })
+
+    </script>
+    
+</body>
+</html>
